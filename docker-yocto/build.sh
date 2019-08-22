@@ -27,7 +27,8 @@ if [ -d $letter ] ;then
 	sudo docker ps -a | grep ${ProjectName}_$(id -nu)>/dev/null;
 	if [ $? -ne 0 ]
 	then
-		sudo docker create -p 80:80 -it -v $letter:/home/$(id -nu)/shared --name ${ProjectName}_$(id -nu) ${ProjectName}-$(id -nu):v1 bash
+		#sudo docker create -p 80:80 -it -v $letter:/home/$(id -nu)/shared --name ${ProjectName}_$(id -nu) ${ProjectName}-$(id -nu):v1 bash
+		sudo docker create -it -v $letter:/home/$(id -nu)/shared --name ${ProjectName}_$(id -nu) ${ProjectName}-$(id -nu):v1 bash
 	else
 		echo "Container ${ProjectName}_$(id -nu) is existed!!!"
 	fi
