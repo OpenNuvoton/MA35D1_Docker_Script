@@ -50,6 +50,7 @@ RUN apt-get update && apt-get install -y \
         libncurses5-dev \
         screen \
 	vim-tiny \
+	device-tree-compiler \
  && rm -rf /var/lib/apt/lists/* \
  && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > /usr/bin/repo \
  && chmod a+x /usr/bin/repo \
