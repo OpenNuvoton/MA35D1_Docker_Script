@@ -55,6 +55,7 @@ RUN apt-get update && apt-get install -y \
         bison \
 	vim-tiny \
 	device-tree-compiler \
+	xvfb \
  && rm -rf /var/lib/apt/lists/* \
  && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > /usr/bin/repo \
  && chmod a+x /usr/bin/repo \
