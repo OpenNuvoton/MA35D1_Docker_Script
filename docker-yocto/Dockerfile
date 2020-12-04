@@ -56,6 +56,7 @@ RUN apt-get update && apt-get install -y \
 	vim-tiny \
 	device-tree-compiler \
 	xvfb \
+	libgtk2.0-dev \
 	libssl-dev \
  && rm -rf /var/lib/apt/lists/* \
  && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > /usr/bin/repo \
