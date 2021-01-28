@@ -61,6 +61,7 @@ RUN apt-get update && apt-get install -y \
  && rm -rf /var/lib/apt/lists/* \
  && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > /usr/bin/repo \
  && chmod a+x /usr/bin/repo \
+ && ln -s /usr/bin/python3 /usr/bin/python \
  && id build1 2>/dev/null || useradd --uid 30000 --create-home build1 \
  && echo "build1 ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers \
  && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
