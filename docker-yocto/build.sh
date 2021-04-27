@@ -1,6 +1,6 @@
 #!/bin/sh
 
-ProjectName=nua3500
+ProjectName=ma35d1
 if [ "$(whoami)" = "root" ]; then
 	echo "ERROR: do not use the BSP as root. Exiting..."
 	exit 1
