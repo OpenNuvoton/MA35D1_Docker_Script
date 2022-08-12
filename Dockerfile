@@ -61,6 +61,9 @@ RUN apt-get update && apt-get install -y \
 	net-tools \
 	libyaml-dev \
 	rsync \
+	liblz4-tool \
+	zstd \
+	python3-pip \
  && rm -rf /var/lib/apt/lists/* \
  && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > /usr/bin/repo \
  && chmod a+x /usr/bin/repo \
@@ -70,7 +73,8 @@ RUN apt-get update && apt-get install -y \
  && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
  && echo 'LANG="en_US.UTF-8"'>/etc/default/locale \
  && dpkg-reconfigure --frontend=noninteractive locales \
- && update-locale LANG=en_US.UTF-8
+ && update-locale LANG=en_US.UTF-8 \
+ && pip3 install pyusb usb crypto ecdsa crcmod tqdm pycryptodome
 
 ENV LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
