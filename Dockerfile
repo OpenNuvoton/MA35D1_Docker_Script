@@ -74,7 +74,7 @@ RUN apt-get update && apt-get install -y \
  && echo 'LANG="en_US.UTF-8"'>/etc/default/locale \
  && dpkg-reconfigure --frontend=noninteractive locales \
  && update-locale LANG=en_US.UTF-8 \
- && pip3 install pyusb usb crypto ecdsa crcmod tqdm pycryptodome
+ && pip3 install pyusb usb crypto ecdsa crcmod tqdm pycryptodome pycryptodomex pyelftools
 
 ENV LC_ALL=en_US.UTF-8 \
     LANG=en_US.UTF-8 \
