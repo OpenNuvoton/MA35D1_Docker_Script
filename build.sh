@@ -1,13 +1,13 @@
 #!/bin/sh
 
-ProjectName=ma35d1_2
+ProjectName=nvt
 if [ "$(whoami)" = "root" ]; then
 	echo "ERROR: do not use the BSP as root. Exiting..."
 	exit 1
 fi
 
-echo 'Please enter absolute path for shared folders(eg:/home/<user name>) :'
-read letter
+echo "Docker shared folder will mount /home/$USER/shared"
+letter=/home/$USER
 
 if [ -d $letter ] ;then
 	cp Dockerfile Dockerfile_new

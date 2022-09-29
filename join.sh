@@ -1,5 +1,5 @@
 #!/bin/sh
-ProjectName=ma35d1_2
+ProjectName=nvt
 
 sudo docker ps -a | grep ${ProjectName}_$(id -nu)>/dev/null;
 if [ $? -ne 0 ]
