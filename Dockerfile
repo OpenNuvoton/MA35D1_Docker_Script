@@ -65,6 +65,8 @@ RUN apt-get update && apt-get install -y \
 	zstd \
 	python3-pip \
 	git-lfs \
+	iputils-ping \
+	jq \
  && rm -rf /var/lib/apt/lists/* \
  && curl https://mirrors.tuna.tsinghua.edu.cn/git/git-repo > /usr/bin/repo \
  && chmod a+x /usr/bin/repo \
